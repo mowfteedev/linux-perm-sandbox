@@ -76,3 +76,6 @@ export interface PosixEvaluationResult {
   traces: TraceStep[];
   denialReason?: string;
 }
+
+export * from '@/core/sudoers/types';
+
