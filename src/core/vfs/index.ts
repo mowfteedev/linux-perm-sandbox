@@ -1,2 +1,2 @@
-// Virtual File System (VFS) Module Entry Point
-export {};
+export * from './vfs';
+export * from './default-fs';

@@ -1,9 +1,9 @@
 # 📌 Bảng Tiến Độ & Bộ Nhớ Tác Chiến: linux-perm-sandbox
-*Cập nhật lần cuối: 2026-09-12 13:40*
+*Cập nhật lần cuối: 2026-09-12 14:06*
 
 ## 🎯 Mục Tiêu Phiên Hiện Tại (Current Milestone)
-- **Giai đoạn**: Khởi tạo Nền Móng & Cấu Trúc (Scaffold & Tooling) - Hoàn tất STT 2
-- **Trọng tâm**: Hoàn tất cấu hình Vite + React 19 + Tailwind CSS v4 + Vitest, cấu trúc phân tầng `src/core` vs `src/ui`, kiểm thử smoke test. Báo cáo Bang chủ duyệt trước khi bắt đầu STT 3.
+- **Giai đoạn**: Xây dựng Core Engines (Pure TypeScript) - Hoàn tất STT 3
+- **Trọng tâm**: Hoàn thành In-Memory VFS và POSIX Kernel Evaluator (Path Traversal, Root Bypass, Non-cumulative UGO, SUID/SGID/Sticky bit, micro-step trace). Bộ 28 tests pass 100%. Báo cáo Bang chủ duyệt trước khi bắt đầu STT 4.
 
 ---
 
@@ -13,7 +13,7 @@
 |:---:|:---|:---:|:---:|:---|
 | 1 | Hoạch định kiến trúc, chốt ADR-0001 & Memory | `@tech-lead` | 🟢 Đã xong | Đã chốt kiến trúc React + Core POSIX VFS tách biệt |
 | 2 | Khởi tạo dự án Vite + React + Tailwind CSS | `@devops` / `@tech-lead` | 🟢 Đã xong | Bundle 75KB gzip (< 200KB), Strict TS, Vitest pass, phân tầng thư mục |
-| 3 | Xây dựng Core POSIX Engine & VFS | `@backend` | ⚪ Chờ duyệt | Pure TS, traversal, UGO, SUID/SGID/Sticky |
+| 3 | Xây dựng Core POSIX Engine & VFS | `@backend` | 🟢 Đã xong | Pure TS, traversal, Non-cumulative UGO, SUID/SGID/Sticky, 28/28 tests pass |
 | 4 | Xây dựng Sudoers Lexer/Parser & Matcher | `@backend` | ⚪ Chờ duyệt | Parse User_Alias, Cmnd_Alias, NOPASSWD, last-match |
 | 5 | Thiết kế UI & Theme Terminal SysAdmin | `@designer` | ⚪ Chờ duyệt | Giao diện tối màu, phân cấp màu bit UGO rõ nét |
 | 6 | Dựng giao diện Matrix, Tracer, VFS Tree | `@frontend` | ⚪ Chờ duyệt | Phản hồi < 150ms, tương tác kéo thả mượt mà |
