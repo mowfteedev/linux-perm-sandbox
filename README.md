@@ -1,7 +1,8 @@
 # 🛡️ Linux Permissions & Sudoers Sandbox (`linux-perm-sandbox`)
 
 > **Môi trường tương tác trực quan mô phỏng cơ chế phân quyền tập tin POSIX và thẩm định quy tắc `/etc/sudoers` chuẩn Linux.**  
-> 100% Client-side • Không máy chủ • Zero Latency (< 1ms) • Siêu nhẹ (~95KB Gzip).
+> 100% Client-side • Không máy chủ • Zero Latency (< 1ms) • Siêu nhẹ (~95KB Gzip).  
+> 🌐 **Trải nghiệm trực tuyến (Live Demo)**: [https://mowfteedev.github.io/linux-perm-sandbox/](https://mowfteedev.github.io/linux-perm-sandbox/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![React: 19](https://img.shields.io/badge/React-19.0-61DAFB.svg)](package.json)
