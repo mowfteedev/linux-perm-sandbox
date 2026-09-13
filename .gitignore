@@ -30,3 +30,7 @@ coverage
 # Environment
 .env
 .env.production
+
+# Local Assessment / Internal Feedback (Not for Remote Repo)
+DANH_GIA_DU_AN.md
+*.evaluation.md
