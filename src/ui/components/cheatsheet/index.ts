@@ -1,2 +1,1 @@
-// Cheatsheet & Live Command Exporter UI Component
-export {};
+export * from './CheatsheetModal';

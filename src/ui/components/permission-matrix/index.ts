@@ -1,2 +1,1 @@
-// Permission Matrix UI Component
-export {};
+export * from './PermissionMatrix';

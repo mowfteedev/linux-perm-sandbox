@@ -121,6 +121,54 @@ export const GTFOBINS_DATABASE: Record<string, GTFOBinInfo> = {
     description: 'Tee can append new root user lines directly to /etc/passwd or /etc/sudoers.',
     url: 'https://gtfobins.github.io/gtfobins/tee/#sudo',
   },
+  git: {
+    binary: 'git',
+    functions: ['Shell', 'Sudo'],
+    description: 'Git can invoke an interactive root shell via git help config or custom pager execution.',
+    url: 'https://gtfobins.github.io/gtfobins/git/#sudo',
+  },
+  nmap: {
+    binary: 'nmap',
+    functions: ['Shell', 'Sudo'],
+    description: 'Nmap can run interactive lua scripts or --interactive shell to gain root.',
+    url: 'https://gtfobins.github.io/gtfobins/nmap/#sudo',
+  },
+  sed: {
+    binary: 'sed',
+    functions: ['Shell', 'Sudo', 'File write'],
+    description: 'Sed can execute arbitrary commands or overwrite critical system security files.',
+    url: 'https://gtfobins.github.io/gtfobins/sed/#sudo',
+  },
+  man: {
+    binary: 'man',
+    functions: ['Shell', 'Sudo'],
+    description: 'Man pager uses less to spawn an interactive shell: !/bin/sh.',
+    url: 'https://gtfobins.github.io/gtfobins/man/#sudo',
+  },
+  apt: {
+    binary: 'apt',
+    functions: ['Shell', 'Sudo'],
+    description: 'Apt can execute arbitrary shell commands via apt-get changelog or apt hook configurations.',
+    url: 'https://gtfobins.github.io/gtfobins/apt/#sudo',
+  },
+  curl: {
+    binary: 'curl',
+    functions: ['File read', 'File write', 'Sudo'],
+    description: 'Curl can overwrite /etc/shadow or fetch malicious scripts directly to privileged paths.',
+    url: 'https://gtfobins.github.io/gtfobins/curl/#sudo',
+  },
+  wget: {
+    binary: 'wget',
+    functions: ['File write', 'Sudo'],
+    description: 'Wget can overwrite system binaries or inject arbitrary credentials into /etc/sudoers.',
+    url: 'https://gtfobins.github.io/gtfobins/wget/#sudo',
+  },
+  pkexec: {
+    binary: 'pkexec',
+    functions: ['Sudo'],
+    description: 'Pkexec executes commands as superuser and can spawn a root shell directly.',
+    url: 'https://gtfobins.github.io/gtfobins/pkexec/#sudo',
+  },
 };
 
 /**

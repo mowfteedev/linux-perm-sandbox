@@ -1,2 +1,1 @@
-// Sudoers Studio UI Component
-export {};
+export * from './SudoersStudio';

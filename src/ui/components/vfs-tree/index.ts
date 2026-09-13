@@ -1,2 +1,1 @@
-// VFS Tree UI Component
-export {};
+export * from './VFSTree';

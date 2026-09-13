@@ -1,2 +1,1 @@
-// Kernel Tracer UI Component
-export {};
+export * from './KernelTracer';

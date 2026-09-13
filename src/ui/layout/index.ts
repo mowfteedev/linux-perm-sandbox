@@ -1,2 +1,2 @@
-// Layout Components (Header, StatusBar, Shell)
-export {};
+export * from './Header';
+export * from './StatusBar';
