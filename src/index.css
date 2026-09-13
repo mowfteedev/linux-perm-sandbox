@@ -1,7 +1,79 @@
 @import "tailwindcss";
 
+@theme {
+  --color-canvas: #050811;
+  --color-surface-card: #0c1222;
+  --color-surface-elevated: #141d33;
+  --color-surface-hover: #1a2540;
+  --color-border-subtle: #1e293b;
+
+  --color-ugo-user: #38bdf8;
+  --color-ugo-group: #818cf8;
+  --color-ugo-others: #a78bfa;
+
+  --color-bit-read: #34d399;
+  --color-bit-write: #fbbf24;
+  --color-bit-exec: #60a5fa;
+
+  --color-special-suid: #fb7185;
+  --color-special-sgid: #fb923c;
+  --color-special-sticky: #e879f9;
+
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
 @layer base {
   * {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: #1e293b;
   }
+
+  body {
+    background-color: #050811;
+    color: #f1f5f9;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Terminal Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090d16;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+/* Terminal Glow & CRT Utilities */
+.terminal-glow-emerald {
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.25);
+}
+
+.terminal-glow-amber {
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.25);
+}
+
+.terminal-glow-rose {
+  box-shadow: 0 0 16px rgba(251, 113, 133, 0.25);
+}
+
+.terminal-glow-sky {
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+}
+
+/* Scanline Texture Overlay (Subtle) */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
 }
