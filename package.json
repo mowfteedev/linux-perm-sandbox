@@ -2,6 +2,8 @@
   "name": "linux-perm-sandbox",
   "private": true,
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "mowfteedev",
   "type": "module",
   "scripts": {
     "dev": "vite",
