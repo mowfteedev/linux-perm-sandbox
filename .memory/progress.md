@@ -1,11 +1,12 @@
 # 📌 Bảng Tiến Độ & Bộ Nhớ Tác Chiến: linux-perm-sandbox
-*Cập nhật lần cuối: 2026-09-13 12:40*
+*Cập nhật lần cuối: 2026-09-13 12:45*
 
 ## 🎯 Mục Tiêu Phiên Hiện Tại (Current Milestone)
-- **Giai đoạn**: Hoàn tất STT 6 (`@frontend`) và STT 7 (`@security`).
+- **Giai đoạn**: Hoàn tất STT 10 (Biên soạn tài liệu README & Cẩm nang SysAdmin - `@doc-writer`).
 - **Trọng tâm**:
-  - STT 6: Hoàn thành kiến trúc UI Dashboard 3 cột đa bảng điều khiển (VFSTree Inode Explorer, Interactive Permission Matrix 3x3 UGO + Special Bits, Kernel Tracer chi tiết từng chặng, Sudoers Studio với mô phỏng trực tiếp và Cheatsheet tra cứu). Phản hồi tính bằng micro-giây (< 1ms), bundle 95KB gzip.
-  - STT 7: Rà soát bảo mật toàn diện OWASP Client-side, mở rộng 27 công cụ leo thang GTFOBins, kiểm định cơ chế Rule Clash & Accidental Bypass. Bộ 55/55 Unit & Security Tests đạt 100% Pass.
+  - Soạn thảo `README.md` đạt chuẩn quốc tế, vượt qua "Bài kiểm tra 5 giây", hướng dẫn cài đặt 3 bước, sơ đồ kiến trúc và bảng tra cứu cẩm nang.
+  - Biên soạn `CHANGELOG.md` chuẩn Keep a Changelog cho bản phát hành v0.1.0.
+  - **Kỷ luật Guild**: Giữ nguyên STT 8 (`@tester`) và STT 9 (`@code-reviewer`) ở trạng thái chờ lệnh theo chỉ đạo của Bang chủ ("chưa thực hiện các công việc 8").
 
 ---
 
@@ -20,19 +21,16 @@
 | 5 | Thiết kế UI & Theme Terminal SysAdmin | `@designer` | 🟢 Đã xong | Tokens chuẩn 8pt, Dark Theme SysAdmin, phân cấp màu UGO & SUID/SGID/Sticky, WCAG AA, spec bàn giao |
 | 6 | Dựng giao diện Matrix, Tracer, VFS Tree & Studio | `@frontend` | 🟢 Đã xong | 3-panel responsive layout, Interactive UGO Matrix, Live Traversal Tracer, Sudoers Studio, bundle 95KB |
 | 7 | Thẩm định mã nguồn, rà soát GTFOBins & Rules | `@security` | 🟢 Đã xong | 27 GTFOBins, kiểm định Rule Clash & Negation Bypass, 10 security tests pass, báo cáo bảo mật đầy đủ |
-| 8 | Viết bộ Unit Test kiểm tra chuẩn POSIX | `@tester` | ⚪ Chờ duyệt | Kiểm thử toàn bộ edge case của kernel permission |
-| 9 | Soát mã nguồn & dọn sạch nợ kỹ thuật | `@code-reviewer` | ⚪ Chờ duyệt | Clean code, không leak state, không duplicate |
-| 10| Viết tài liệu README & Cẩm nang SysAdmin | `@doc-writer` | ⚪ Chờ duyệt | Hướng dẫn sử dụng và cheatsheet trực quan |
+| 8 | Viết bộ Unit Test kiểm tra chuẩn POSIX | `@tester` | ⚪ Chờ duyệt | Kiểm thử toàn bộ edge case của kernel permission (Chờ lệnh) |
+| 9 | Soát mã nguồn & dọn sạch nợ kỹ thuật | `@code-reviewer` | ⚪ Chờ duyệt | Clean code, không leak state, không duplicate (Chờ lệnh) |
+| 10| Viết tài liệu README & Cẩm nang SysAdmin | `@doc-writer` | 🟢 Đã xong | README đạt chuẩn 5 giây, Quickstart 3 bước, CHANGELOG v0.1.0, Cheatsheet |
 
 *Quy ước trạng thái*: 🟢 Đã xong | ⏳ Đang làm | 🔴 Gặp lỗi/Blocker | ⚪ Chờ duyệt
 
 ---
 
 ## 🧠 Nhật Ký Quyết Định & Lưu Ý Bối Cảnh (Context Notes)
-- **STT 6 Delivery**:
-  - Giao diện Dashboard 3 cột kết nối trực tiếp vào `InMemoryVFS` và `POSIX Evaluator` qua lightweight reactive store.
-  - Hỗ trợ responsive chuyển tab mượt mà trên di động (Files / Matrix / Sudoers) mà không bị vỡ giao diện.
-- **STT 7 Delivery**:
-  - Mở rộng kho nhận diện GTFOBins lên 27 binaries (bổ sung: `git`, `nmap`, `sed`, `man`, `apt`, `curl`, `wget`, `pkexec`).
-  - Thêm 10 test cases bảo mật chuyên sâu (`security-audit.test.ts`), nâng tổng số test của toàn dự án lên 55 tests pass 100%.
-  - Bàn giao báo cáo an ninh hoàn chỉnh tại `.memory/security-audit-report.md`.
+- **Tài liệu hóa hoàn thiện**:
+  - `README.md` được tái cấu trúc toàn diện: Nêu bật nỗi đau, giải pháp, hướng dẫn khởi động 3 bước copy-paste chạy ngay, bảng giá trị bát phân, sơ đồ bố cục 3 cột và cấu trúc thư mục.
+  - `CHANGELOG.md` được tạo mới theo chuẩn Keep a Changelog ghi nhận toàn bộ các tính năng đã bàn giao của v0.1.0.
+  - Tuân thủ chỉ đạo của Bang chủ: Hoàn tất tài liệu và push code, chưa đụng chạm đến STT 8 (`@tester`).
